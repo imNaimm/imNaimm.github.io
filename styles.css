@@ -98,7 +98,6 @@ h1{
 	height: 100%;
 	align-items: center;
 }
-
 	
 
 #welcom-section p{
@@ -107,6 +106,114 @@ h1{
 	font-size: 3rem;
 	color:#F7444E ;
 }
+
+
+
+#welcom-section p {
+  border-right: .15em solid #F7444E;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#welcom-section h1 {
+  border-right: .15em solid #F7444E;
+  font-family: "Courier";
+  white-space: nowrap;
+  overflow: hidden;
+}
+#welcom-section h1 {
+  width: 7.3em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#welcom-section p {
+  width: 8em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #F7444E;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #F7444E;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid #fff;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+
+
+
+
+
+
+
 
 #projects{
 	background-color: #78BCC4;
@@ -178,8 +285,68 @@ h1{
 	margin: 4px;
 	padding: 4px;
 }
+.typewriter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.typewriter p{
+	text-align: center;
+	display: inline;
+}
+.typewriter p:nth-child(1) {
+  color: #fff;
+  font-family: 'Waiting for the Sunrise', cursive; 
+  overflow: hidden;
+  border-right: .15em solid #F7444E; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 2s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.typewriter p:nth-child(2) {
+
+	 color: #fff;
+  font-family: 'Waiting for the Sunrise', cursive; 
+  overflow: hidden;
+  border-right: .15em solid #F7444E; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 1.6s steps(30, end),
+    blink-caret .5s step-end infinite;
+
+}
+.typewriter p:nth-child(3) {
+
+	 color: #fff;
+  font-family: 'Waiting for the Sunrise', cursive; 
+  overflow: hidden;
+  border-right: .15em solid #F7444E; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 1s steps(20, end),
+    blink-caret .5s step-end infinite;
+
+}
 
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #F7444E }
+}
 
 .container{
 	width: 100%;
@@ -192,4 +359,33 @@ footer{
 	padding: 2rem;
 	background-color: #002C3E;
 	border-top: 4px solid #F7444E;
+}
+.naim{
+	animation: naimm 3s infinite;
+	border-radius: 3px;
+}
+@keyframes naimm {
+  0%{
+  	color: #F7F8F3;
+  }
+  20%{
+  	color: #F7444E;
+
+  }
+  40%{
+  	background-color:#F7F8F3 ;
+  	color:#F7444E ;
+  }
+  60%{
+
+  	background-color: #78BCC4 ;
+  	color:#F7F8F3 ;
+  }
+  80%{
+  	background-color: #F7444E;
+  	color: #F7F8F3;
+  }
+  100%{
+  	color: #F7F8F3;
+  }
 }
