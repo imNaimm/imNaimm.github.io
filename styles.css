@@ -4,6 +4,13 @@
   padding: 0;
 
 }
+:root {
+  --dark: #352F44;
+  --lessdark: #5C5470; 
+  --grey:  #B9B4C7; 
+  --light: #FAF0E6; 
+}
+
 
 /* box-sizing and font sizing */
 *,
@@ -28,8 +35,8 @@ body{
     font-size: 1.8rem; 
     font-weight: 400;
     line-height: 1.4;
-    background-color: #002C3E;
-	color: #F7F8F3;
+    background-color:var(--dark);
+	color: var(--light);
 
 }
 h1,
@@ -52,7 +59,7 @@ ul {
 }
 
 a{
-	color: #F7F8F3;
+	color: var(--dark);
 	text-decoration: none;
 }
 img{
@@ -64,7 +71,7 @@ img{
 	display: flex;
 	justify-content: flex-end;
 	position: fixed;
-	background-color: #F7444E;
+	background-color: var(--light);
 	
 	width: 100%;
 	top:  0;
@@ -84,8 +91,8 @@ ul a{
 	padding: 2rem;
 }
 ul a:hover{
-	color: #F7F8F3;
-	background-color: #78BCC4;
+	color: var(--light);
+	background-color: var(--dark);
 }
 h1{
 	font-size: 6rem;
@@ -104,39 +111,39 @@ h1{
 	font-style: italic;
 	font-weight: 200;
 	font-size: 3rem;
-	color:#F7444E ;
+	color: var(--grey) ;
 }
 
 
 
 #welcom-section p {
-  border-right: .15em solid #F7444E;
+  border-right: .15em solid var(--grey);
   font-family: 'Poppins', sans-serif;
   white-space: nowrap;
   overflow: hidden;
 }
 #welcom-section h1 {
-  border-right: .15em solid #F7444E;
+  border-right: .15em solid #F9D949;
   font-family: "Courier";
   white-space: nowrap;
   overflow: hidden;
 }
 #welcom-section h1 {
   width: 7.3em;
-  -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
+  animation: type 2s steps(40, end);
+  animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 #welcom-section p {
   width: 8em;
   opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
   animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
+  animation: type2 2s steps(40, end);
   animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
@@ -145,24 +152,13 @@ h1{
     width: 0;
   }
   99.9% {
-    border-right: .15em solid #F7444E;
+    border-right: .15em solid #F9D949;
   }
   100% {
     border: none;
   }
 }
 
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid #F7444E;
-  }
-  100% {
-    border: none;
-  }
-}
 
 @keyframes type2 {
   0% {
@@ -172,7 +168,7 @@ h1{
     opacity: 1;
   }
   99.9% {
-    border-right: .15em solid #fff;
+    border-right: .15em solid var(--grey);
   }
   100% {
     opacity: 1;
@@ -180,21 +176,6 @@ h1{
   }
 }
 
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
 
 
 @keyframes blink {
@@ -202,13 +183,6 @@ h1{
     border-color: transparent;
   }
 }
-@-webkit-keyframes blink {
-  50% {
-    border-color: tranparent;
-  }
-}
-
-
 
 
 
@@ -216,15 +190,16 @@ h1{
 
 
 #projects{
-	background-color: #78BCC4;
+	background-color: var(--light);
 	padding: 10rem 2rem;
 	text-align: center;
 
 }
 #projects h2{
+  color: var(--dark);
 	max-width: 640px;
 	margin: 0 auto 6rem auto;
-	border-bottom: 2px solid  #F7F8F3;
+	border-bottom: 2px solid  var(--dark);
 }
 #projects div{
 	display: grid;
@@ -237,17 +212,17 @@ h1{
 }
 
 .project{
-	background-color:#002C3E ;
+	background-color:var(--dark) ;
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 	border-radius: 2px;
 }
 .code {
-  color: #002C3E ;
+  color: var(--dark) ;
   transition: color 0.3s ease-out;
 }
 
 .project:hover .code {
-  color: #ff7f50;
+  color: #F9D949;
 }
 .project-image{
 	height: calc(100% - 6.8rem);
@@ -255,6 +230,7 @@ h1{
 	object-fit: cover;
 }
 .project-title{
+  color: var(--light);
 	font-size: 2rem;
 	padding: 2rem 0.5rem;
 }@media (max-width: 30.625em) {
@@ -282,8 +258,14 @@ h1{
 
 }
 #contact div i{
+  color: var(--light);
 	margin: 4px;
 	padding: 4px;
+  border-radius: 4px;
+}
+#contact > div i:hover{
+  color: var(--dark);
+  background-color: #F9D949;
 }
 .typewriter{
 	display: flex;
@@ -295,42 +277,26 @@ h1{
 .typewriter p{
 	text-align: center;
 	display: inline;
-}
-.typewriter p:nth-child(1) {
-  color: #fff;
+  color: var(--grey);
   font-family: 'Waiting for the Sunrise', cursive; 
   overflow: hidden;
-  border-right: .15em solid #F7444E; 
+  border-right: .15em solid var(--grey); 
   white-space: nowrap; 
   margin: 0 auto; 
   letter-spacing: .15em; 
+}
+.typewriter p:nth-child(1) {
   animation: 
     typing 2s steps(30, end),
     blink-caret .5s step-end infinite;
 }
 .typewriter p:nth-child(2) {
-
-	 color: #fff;
-  font-family: 'Waiting for the Sunrise', cursive; 
-  overflow: hidden;
-  border-right: .15em solid #F7444E; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; 
   animation: 
     typing 1.6s steps(30, end),
     blink-caret .5s step-end infinite;
 
 }
 .typewriter p:nth-child(3) {
-
-	 color: #fff;
-  font-family: 'Waiting for the Sunrise', cursive; 
-  overflow: hidden;
-  border-right: .15em solid #F7444E; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; 
   animation: 
     typing 1s steps(20, end),
     blink-caret .5s step-end infinite;
@@ -345,7 +311,7 @@ h1{
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #F7444E }
+  50% { border-color: var(--grey); }
 }
 
 .container{
@@ -357,8 +323,8 @@ footer{
 	display: flex;
 	justify-content: space-evenly;
 	padding: 2rem;
-	background-color: #002C3E;
-	border-top: 4px solid #F7444E;
+	background-color: var(--dark);
+	border-top: 4px solid var(--light);
 }
 .naim{
 	animation: naimm 3s infinite;
@@ -366,26 +332,26 @@ footer{
 }
 @keyframes naimm {
   0%{
-  	color: #F7F8F3;
+  	color: var(--light);
   }
   20%{
-  	color: #F7444E;
+  	color: var(--grey);
 
   }
   40%{
-  	background-color:#F7F8F3 ;
-  	color:#F7444E ;
+  	background-color:#F9D949 ;
+  	color:var(--dark);
   }
   60%{
 
-  	background-color: #78BCC4 ;
-  	color:#F7F8F3 ;
+  	background-color: #F9D949 ;
+  	color:var(--dark) ;
   }
   80%{
-  	background-color: #F7444E;
-  	color: #F7F8F3;
+  	background-color: var(--light);
+  	color: var(--dark);
   }
   100%{
-  	color: #F7F8F3;
+  	color: var(--light);
   }
 }
