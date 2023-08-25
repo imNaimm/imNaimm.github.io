@@ -1,6 +1,8 @@
+/* Base reset */
 * {
   margin: 0;
   padding: 0;
+
 }
 :root {
   --dark: #352F44;
@@ -8,33 +10,47 @@
   --grey:  #B9B4C7; 
   --light: #FAF0E6; 
 }
+
+
+/* box-sizing and font sizing */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body{
-font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
     font-size: 1.8rem; 
     font-weight: 400;
     line-height: 1.4;
     background-color:var(--dark);
-color: var(--light);
+	color: var(--light);
+
 }
+
 h1,h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-align: center;
 }
+
+
 ul {
   list-style: none;
 }
+
 a{
 	color: var(--dark);
 	text-decoration: none;
@@ -42,6 +58,21 @@ a{
 img{
 	display: block;
 	width: 100%;
+}
+.keys, .key{
+  display: inline;
+}
+.key{
+  border-radius: 5px;
+  transition: all 0.09s;
+
+}
+.playing{
+  padding: 15px;
+  margin: 15px;
+  transform: scale(2);
+  border-color: #F9D949;
+  box-shadow: 0 0 10px #F9D949;
 }
 
 .nav{
@@ -60,11 +91,14 @@ nav ul{
 display: flex;
 margin-right: 2rem;
 }
+
+
 ul a{
 	display: block;
 	font-size: 2.2rem;
 	padding: 2rem;
 }
+
 ul a:hover{
 	color: var(--light);
 	background-color: var(--dark);
@@ -80,6 +114,7 @@ h1{
 	height: 100%;
 	align-items: center;
 }
+	
 
 #welcom-section p{
 	font-style: italic;
@@ -157,6 +192,11 @@ h1{
   }
 }
 
+
+
+
+
+
 #projects{
 	background-color: var(--light);
 	padding: 10rem 2rem;
@@ -210,6 +250,9 @@ h1{
     grid-template-columns: 1fr;
   }
 }
+
+
+
 #contact{
 	display: flex;
 	justify-content: center;
