@@ -289,7 +289,7 @@ h1{
   color: var(--grey);
   font-family: 'Waiting for the Sunrise', cursive; 
   overflow: hidden;
-  border-right: .15em solid var(--grey); 
+  /*border-right: .15em solid var(--grey); */
   margin: 0 auto; 
   letter-spacing: .15em; 
 }
