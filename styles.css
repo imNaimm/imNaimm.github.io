@@ -138,20 +138,15 @@ h1{
 }
 #welcom-section h1 {
   width: 7.3em;
-  animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
-  animation-fill-mode: forwards;
+  animation: type 1.5s steps(30, end);
   animation-fill-mode: forwards;
 }
 
 #welcom-section p {
   width: 8em;
   opacity: 0;
-  animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  animation-delay: 2s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
+  animation: type2 1.2s steps(30, end);
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 
